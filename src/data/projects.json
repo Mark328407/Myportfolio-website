@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce API Documentation",
+    "description": "Dynamic E-Commerce workflow management system featuring order processing, real-time inventory updates, secure authentication and automated reporting. Backend APIs documented using Postman.",
+    "image": "https://cdn-icons-png.flaticon.com/512/1087/1087840.png"
+  },
+  {
+    "id": 2,
+    "title": "Course Booking API Documentation",
+    "description": "RESTful API for managing course enrollments, authentication, CRUD operations, archiving and student management. Publicly documented using Postman.",
+    "image": "https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+  },
+  {
+    "id": 3,
+    "title": "Course Booking App",
+    "description": "A MERN stack course enrollment system featuring secure authentication, role-based access control, course browsing, enrollment, and profile management.",
+    "image": "https://cdn-icons-png.flaticon.com/512/3940/3940056.png"
+  },
+  {
+    "id": 4,
+    "title": "E-commerce App",
+    "description": "MERN E-Commerce Platform featuring dynamic product catalog with filtering and sorting, real-time search, seamless cart updates, secure checkout and a comprehensive admin dashboard.",
+    "image": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+  },
+  {
+    "id": 5,
+    "title": "Airline Booking System Mockup",
+    "description": "Side Project: Conceptual design showcasing an intuitive UI for flight search, seat selection, and booking confirmation, focusing on user experience and workflow efficiency.",
+    "image": "https://cdn-icons-png.flaticon.com/512/3976/3976625.png"
+  },
+  {
+    "id": 6,
+    "title": "Airline Booking System Prototype",
+    "description": "Side Project: Interactive prototype simulating end-to-end airline booking functionalities, including flight search, reservation, payment processing and real-time ticket management.",
+    "image": "https://cdn-icons-png.flaticon.com/512/3050/3050525.png"
+  },
+  {
+    "id": 7,
+    "title": "Short Courses Capstone",
+    "description": "Side Project: A capstone project showcasing course management and enrollment features built during training.",
+    "image": "https://cdn-icons-png.flaticon.com/512/1157/1157015.png"
+  }
+]
