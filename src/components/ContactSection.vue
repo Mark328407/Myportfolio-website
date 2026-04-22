@@ -82,7 +82,7 @@
   const isLoading = ref(false);
 
   const submitForm = async () => {
-    // Check if reCAPTCHA token is present
+  
     if (!recaptchaToken.value) {
       notyf.error('Please verify that you are not a robot.');
       return;
@@ -110,7 +110,7 @@
       if (result.success) {
         isLoading.value = false;
         notyf.success("Message Sent!");
-        // Reset form fields
+      
         name.value = "";
         email.value = "";
         message.value = "";
@@ -159,16 +159,23 @@
     }
   }
 
+
+  let intervalId = null;
+
   onMounted(() => {
-    const interval = setInterval(() => {
+    intervalId = setInterval(() => {
       if (window.grecaptcha && window.grecaptcha.render) {
         renderRecaptcha();
-        clearInterval(interval);
+        clearInterval(intervalId);
+        intervalId = null;
       }
     }, 100);
+  });
 
-    onBeforeUnmount(() => {
-      clearInterval(interval);
-    });
+
+  onBeforeUnmount(() => {
+    if (intervalId !== null) {
+      clearInterval(intervalId);
+    }
   });
 </script>
