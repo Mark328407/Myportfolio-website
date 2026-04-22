@@ -124,7 +124,7 @@
     }
   };
 
-  const SITE_KEY = '6LfJKLwsAAAAAD_I-LT7amUs4OaftHPdJEADIbf4';
+  const SITE_KEY = '6Lfle8QsAAAAAGPyLjHcZ_aos8BqZYElh6X8qaZ1';
 
   const recaptchaContainer = ref(null);
   const recaptchaWidgetId = ref(null);
