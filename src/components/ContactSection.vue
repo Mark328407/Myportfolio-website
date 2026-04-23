@@ -82,7 +82,21 @@
   const isLoading = ref(false);
 
   const submitForm = async () => {
+
+   
+    if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+      notyf.error('Please fill in all fields.');
+      return;
+    }
+
   
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value)) {
+      notyf.error('Please enter a valid email address.');
+      return;
+    }
+
+    
     if (!recaptchaToken.value) {
       notyf.error('Please verify that you are not a robot.');
       return;
@@ -110,10 +124,14 @@
       if (result.success) {
         isLoading.value = false;
         notyf.success("Message Sent!");
-      
+
         name.value = "";
         email.value = "";
         message.value = "";
+        resetRecaptcha();
+      } else {
+        isLoading.value = false;
+        notyf.error("Failed to send message. Please try again.");
         resetRecaptcha();
       }
     } catch (e) {
@@ -159,7 +177,6 @@
     }
   }
 
-
   let intervalId = null;
 
   onMounted(() => {
@@ -171,7 +188,6 @@
       }
     }, 100);
   });
-
 
   onBeforeUnmount(() => {
     if (intervalId !== null) {
